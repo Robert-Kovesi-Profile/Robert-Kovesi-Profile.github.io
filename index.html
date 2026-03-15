@@ -1,192 +1,306 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
-.left {
-  background-color:#ebebeb;
-  float:left;
-  width:25%;
-    padding:15px;
-  margin-top:7px;
-  text-align:right;
-}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profile - Robert Kovesi</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
 
-.main {
-  float:left;
-  width:50%;
-  padding:0 20px;
-}
-.right {
-  background-color:#ebebeb;
-  float:left;
-  width:25%;
-    padding:15px;
-	  margin-top:7px;
-  text-align:left;
-}
+		:root {
+			--bg: #f5f7fb;
+			--surface: #ffffff;
+			--surface-alt: #f0f3f7;
+			--text: #1d2733;
+			--muted: #4a5a6a;
+			--accent: #0f4c81;
+			--border: #d7dee7;
+		}
 
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .left, .main, .right {
-    width:100%;
-  }
-}
-</style>
-<title>Profile - Robert Kovesi</title>
+		body {
+			margin: 0;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			color: var(--text);
+			background: var(--bg);
+			line-height: 1.55;
+		}
+
+		.page {
+			max-width: 1180px;
+			margin: 0 auto;
+			padding: 24px 16px;
+		}
+
+		.hero {
+			background: linear-gradient(145deg, #d9e2ec, #c5d0dc);
+			border: 1px solid #bcc8d6;
+			border-radius: 14px;
+			padding: 24px 20px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.hero h1 {
+			margin: 0;
+			font-size: 2rem;
+			letter-spacing: 0.3px;
+		}
+
+		.hero p {
+			margin: 8px 0 0;
+			font-size: 1.1rem;
+			color: #2f4358;
+			font-weight: 600;
+		}
+
+		.layout {
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+			gap: 18px;
+			align-items: start;
+		}
+
+		.panel {
+			background: var(--surface);
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			padding: 16px;
+			box-shadow: 0 2px 8px rgba(17, 35, 54, 0.05);
+		}
+
+		.panel.alt {
+			background: var(--surface-alt);
+		}
+
+		h2 {
+			margin: 0 0 10px;
+			font-size: 1.1rem;
+			color: var(--accent);
+			border-bottom: 1px solid var(--border);
+			padding-bottom: 6px;
+		}
+
+		h3 {
+			margin: 14px 0 4px;
+			font-size: 1rem;
+		}
+
+		p {
+			margin: 0 0 10px;
+			color: var(--text);
+		}
+
+		.muted {
+			color: var(--muted);
+		}
+
+		ul {
+			margin: 6px 0 12px 20px;
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 6px;
+		}
+
+		a {
+			color: var(--accent);
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		a:hover,
+		a:focus-visible {
+			text-decoration: underline;
+		}
+
+		.meta {
+			font-size: 0.95rem;
+			color: var(--muted);
+			margin-bottom: 6px;
+		}
+
+		.section-block + .section-block {
+			margin-top: 18px;
+		}
+
+		.footer {
+			margin-top: 20px;
+			background: #d9e2ec;
+			border: 1px solid #bcc8d6;
+			border-radius: 12px;
+			padding: 12px 16px;
+			text-align: center;
+			color: #2c3f54;
+		}
+
+		.footer a + a {
+			margin-left: 14px;
+		}
+
+		@media only screen and (max-width: 1000px) {
+			.layout {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
 </head>
-<body style="font-family:Verdana;">
+<body>
+	<main class="page">
+		<header class="hero">
+			<h1>Robert Kovesi</h1>
+			<p>IT Engineering Manager</p>
+		</header>
 
-<div style="background-color:#c2c2c2;padding:15px;text-align:center;">
-  <h1>Robert Kovesi</h1>
-  <h2>IT Engineering Manager</h2>
-</div>
+		<section class="layout">
+			<aside class="panel alt" aria-label="Profile sidebar left">
+				<section class="section-block">
+					<h2>Contact</h2>
+					<p><em>Budapest, Hungary</em></p>
+					<p><a href="mailto:kovesirobert@gmail.com">Email</a></p>
+					<p><a href="https://linkedin.com/in/robert-kovesi/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+				</section>
 
-<div style="overflow:auto">
-  <div class="left">
-    <div> 
-    	<h2> Contact </h2>
-    	<p> <i>Budapest,</i> Hungary </br>
+				<section class="section-block">
+					<h2>Key Skills</h2>
+					<ul>
+						<li>IT Product Management</li>
+						<li>Cross-functional Team Leadership</li>
+						<li>Agile Project Management</li>
+						<li>Software Project Management</li>
+						<li>Software Development</li>
+						<li>SAFe, Scrum, Kanban</li>
+						<li>Continuous Delivery</li>
+						<li>Continuous Integration</li>
+						<li>Amazon Web Services</li>
+						<li>A/B testing</li>
+					</ul>
+					<p class="muted">Fluent English • Native Hungarian</p>
+				</section>
+			</aside>
 
-			<a href="mailto:kovesirobert@gmail.com">Email</a></br>
-			<a href="https://linkedin.com/in/robert-kovesi/" target="_blank">LinkedIn</a>
-		</p>
-    </div>
-    <div> <h2> Key Skills </h2>
-    	<p> IT Product Management</br>
-			Cross-functional Team Leadership</br>
-			Agile Project Management</br>
-			Software Project Management</br>
-			Software Development</br>
-			Safe - Scrum - KanBan</br>
-			Continuous Delivery</br>
-			Continuous Integration</br>
-			Amazon Web Services</br>
-			AB testing</br>
-			</br>
-			Fluent English</br>
-			Native Hungarian
-		</p>
-	</div>
+			<article class="panel" aria-label="Main content">
+				<section class="section-block">
+					<h2>Objective</h2>
+					<p>
+						Experienced <strong>IT Engineering Manager</strong> with a demonstrated history in the financial, online travel, and military simulation domains. Skilled in <strong>People Management</strong> (up to ~50 people) and <strong>Agile Project Management</strong> (SAFe Agilist), with a strong software engineering background focused on <strong>SDLC</strong>, <strong>release management</strong>, and serverless AWS cloud architecture (<strong>AWS Certified Solution Architect</strong>).
+					</p>
+					<p>
+						In recent years, alongside my people and delivery management roles, I was responsible for engineering teams that delivered features to a client's <strong>robo-advisor investment platform</strong>, such as:
+					</p>
+					<ul>
+						<li>Tax Loss Harvesting</li>
+						<li>Various new investment options</li>
+						<li>A centralized, event-driven notification flow</li>
+						<li>A B2B API developer portal based on the Kong API Platform</li>
+					</ul>
+					<p>
+						Before that, the teams I managed delivered internal tools and processes for one of the largest publicly traded travel companies, including:
+					</p>
+					<ul>
+						<li>Managing localization requests for several brands and locales</li>
+						<li>Running A/B tests on localized content through the booking path</li>
+					</ul>
+					<p>
+						Hundreds of test instances ran across key pages, generating millions of dollars in GP uplift while collecting thousands of observations on click-through rates and engagement metrics.
+					</p>
+				</section>
 
-  </div>
+				<section class="section-block">
+					<h2>Experience</h2>
 
-  <div class="main">
-	  <div>
-		<h2>Objective</h2>
-		<p> Experienced <strong>IT Engineering Manager</strong> with a demonstrated history of working in the financial and online travel domain and the military simulation industry. Skilled in <strong>People Management</strong> (up to ~50 ppl) and <strong>Agile Project Management</strong> (SAFe Agilist) with a strong software engineering background, focusing on <strong>SDLC</strong>, <strong>release management</strong>, and serverless AWS cloud architecture (<strong>AWS Certified Solution Architect</strong>).
-	            </br>
-	            During the last couple of years besides my People and Delivery management roles, I was responsible for engineering teams that delivered features to customer's <strong>robo-advisor investment platform</strong>, such as 
-		    <ul>
-			    <li>Tax Loss Harvesting</li>
-			    <li>various new investment options</li>
-			    <li>a centralized, event-driven notification flow</li>
-			    <li>and a B2B API developer portal based on the Kong API Platform.</li>
-	            </ul>
-		    Before that, the teams I managed had delivered the internal tools and processes of one of the largest public travel companies relevant to 
-		    <ul>
-			    <li> managing localization requests for several brands and their locales</li>
-                            <li>and running AB tests on the localized content through the booking path.</li>
-		</ul>
-                    Hundreds of test instances ran across the pages, realizing millions of dollars in GP uplift while collecting thousands of observations about click-through rates and engagement metrics.
-	        </p>
-	  </div>
-	  <div>
-		<h2>Experience</h2>
-		<p><strong><a href="https://www.epam.com" target="_blank">EPAM</a></strong> Jul 2011 - Present</p>
-		<p>
-			Jul 2021 - Present (3+ years)</br>
-			<strong>IT Engineering Manager and Unit Lead</strong></br>
-			<i>Product management of customer's robo-advisor investment platform delivered by 3 engineering teams</i></br>
-		 	Tech stack: Java/Python, NodeJS, Angular, AWS, GraphQL, Jira, Github</br>
-			</br>
-		  	Sept 2020 - Jun 2021 (10 months)</br>
-			<strong>IT Engineering Manager and Unit Lead</strong></br>
-			<i>Engineering management of teams delivered a B2B API developer portal based on the Kong API Platform</i></br>
-			</br>
-			Jul 2019 - Aug 2020 (1 year 1 month)</br>
-			<strong>IT Product Manager and People Team Lead</strong></br>
-			<i>Program management of customer's Content Platform organization (including Content Strategy, i18n, and l10n) with 3 engineering teams</i></br>
-			</br>
-			Jan 2017 - Jun 2019 (2 years 8 months)</br>
-			<strong>IT Project Manager and People Team Lead</strong></br>
-			<i>Project management of customer services related to the AB testing framework, Price Display Optimization, and Internationalization</i></br>
-		  	Tech stack: Java/Kotlin, React, AWS, Github</br>
-			</br>
-			Apr 2015 - Dec 2016 (1 year 9 months)</br>
-			<strong>Senior Software Engineer and People Team Lead</strong></br>
-			<i>Developing different kinds of services managed directly by the customer</i></br>
-			</br>
-			Jul 2011 - Mar 2015 (3 years 9 months)</br>
-			<strong>Software Engineer and Offshore Team Lead</strong></br>
-			Tech stack: Java, JavaScript, IntelliJ, Perforce
-		</p>
-		<p><strong><a href="http://www.artifex.hu/en/companyprofile" target="_blank">Artifex</a></strong> Jun 2001 - Jun 2011 (10 years)</p>
-		<p>
-			Jan 2010 - Jun 2011 (1 year 6 months)</br>
-			<strong>Lead software engineer</strong></br>
-			<i>Leading integration process of separate simulation systems for <a href="https://www.nato.int/" target="_blank">NATO</a> via <a href="https://standards.ieee.org/ieee/1516/3744/" target="_blank">HLA</a> standards</i></br>
-			</br>
-			Jan 2004 - Dec 2009 (6 years)</br>
-			<strong>Senior Software Developer</strong></br>
-			<i>Developing modules of complex military simulation systems for the Hungarian Ministry of Defence</i></br>
-			</br>
-			Jun 2001 - Dec 2003 (2 years 7 months)</br>
-			<strong>Software Developer</strong></br>
-			Tech stack: C++; MFC; Visual Studio, MS SourceSafe
-		</p>
-	  </div>
-	  
-	  
-  </div>
+					<h3><a href="https://www.epam.com" target="_blank" rel="noopener noreferrer">EPAM</a></h3>
+					<p class="meta">Jul 2011 – Present</p>
+					<ul>
+						<li>
+							<strong>Jul 2021 – Present:</strong> IT Engineering Manager and Unit Lead<br>
+							<span class="muted">Product management for a client's robo-advisor investment platform delivered by three engineering teams</span><br>
+							Tech stack: Java/Python, Node.js, Angular, AWS, GraphQL, Jira, GitHub
+						</li>
+						<li>
+							<strong>Sep 2020 – Jun 2021:</strong> IT Engineering Manager and Unit Lead<br>
+							<span class="muted">Engineering management for teams delivering a B2B API developer portal based on the Kong API Platform</span>
+						</li>
+						<li>
+							<strong>Jul 2019 – Aug 2020:</strong> IT Product Manager and People Team Lead<br>
+							<span class="muted">Program management for a client's content platform organization (content strategy, i18n, l10n) with three engineering teams</span>
+						</li>
+						<li>
+							<strong>Jan 2017 – Jun 2019:</strong> IT Project Manager and People Team Lead<br>
+							<span class="muted">Project management for the A/B testing framework, price display optimization, and internationalization</span><br>
+							Tech stack: Java/Kotlin, React, AWS, GitHub
+						</li>
+						<li>
+							<strong>Apr 2015 – Dec 2016:</strong> Senior Software Engineer and People Team Lead<br>
+							<span class="muted">Development of various services managed directly by the client</span>
+						</li>
+						<li>
+							<strong>Jul 2011 – Mar 2015:</strong> Software Engineer and Offshore Team Lead<br>
+							Tech stack: Java, JavaScript, IntelliJ, Perforce
+						</li>
+					</ul>
 
-  <div class="right">
-	<div>
-		<h2> Degree </h2>
-		<p> <strong><a href="https://sci.u-szeged.hu/english" target="_blank">University of Szeged</a></strong></br>
-			Faculty of Science and Informatics </br>
-			</br>
-			2001 - 2003 <strong>MSc</strong>,
-			Computer Science</br>
-			1998 - 2001 <strong>BSc</strong>,
-			Programmer mathematician</br>
-			1995 - 2000 <strong>MSc</strong>,
-			Mathematics and Physics teacher
-		</p>
-    </div>
-	<div>
-		<h2> Certifications </h2>
-		<p> <strong>AWS Certified Solution Architect Associate </strong> <i>Amazon, Inc</i></br>
-			Issued Oct 2023</br>
-			</br><strong>AWS Certified Solution Architect Associate </strong> <i>Amazon, Inc</i></br>
-			Issued Sept 2020</br>
-			</br>
-			<strong>SAFe 4 Certified Agilist</strong> <i>Scaled Agile, Inc</i></br>
-			Issued May 2017</br>
-			</br>
-			<strong>Oracle Certified Professional</strong> Java SE 7 Programmer 1Z0804 <i>Oracle</i></br>
-			Issued Jan 2015
-		</p>
-    </div>
-	<div>
-		<h2> Awards </h2>
-		<p> EPAM Impact 2023 - <i>People Developer - Upskilling</i></br>
-			EPAM Impact 2019 - <i>Clients and Technology</i></br>
-			EPAM Impact 2018 - <i>Operating our Business</i></br>
-			EPAM Impact 2017 - <i>Clients and Technology</i></br>
-			EPAM Impact 2016 - <i>Collaboration and leadership</i></br>
-		</p>
-    </div>
-  </div>
-</div>
+					<h3><a href="http://www.artifex.hu/en/companyprofile" target="_blank" rel="noopener noreferrer">Artifex</a></h3>
+					<p class="meta">Jun 2001 – Jun 2011</p>
+					<ul>
+						<li>
+							<strong>Jan 2010 – Jun 2011:</strong> Lead Software Engineer<br>
+							<span class="muted">Leading integration of separate simulation systems for <a href="https://www.nato.int/" target="_blank" rel="noopener noreferrer">NATO</a> via <a href="https://standards.ieee.org/ieee/1516/3744/" target="_blank" rel="noopener noreferrer">HLA</a> standards</span>
+						</li>
+						<li>
+							<strong>Jan 2004 – Dec 2009:</strong> Senior Software Developer<br>
+							<span class="muted">Developing modules of complex military simulation systems for the Hungarian Ministry of Defence</span>
+						</li>
+						<li>
+							<strong>Jun 2001 – Dec 2003:</strong> Software Developer<br>
+							Tech stack: C++, MFC, Visual Studio, MS SourceSafe
+						</li>
+					</ul>
+				</section>
+			</article>
 
-<div style="background-color:#c2c2c2;text-align:center;padding:10px;margin-top:7px;">
-	Robert Kovesi
-	<a href="mailto:kovesirobert@gmail.com">Email</a>
-	<a href="https://linkedin.com/in/robert-kovesi/" target="_blank">LinkedIn</a>
-</div>
+			<aside class="panel alt" aria-label="Profile sidebar right">
+				<section class="section-block">
+					<h2>Education</h2>
+					<p><strong><a href="https://sci.u-szeged.hu/english" target="_blank" rel="noopener noreferrer">University of Szeged</a></strong></p>
+					<p class="muted">Faculty of Science and Informatics</p>
+					<ul>
+						<li>2001 – 2003: <strong>MSc</strong>, Computer Science</li>
+						<li>1998 – 2001: <strong>BSc</strong>, Programmer Mathematician</li>
+						<li>1995 – 2000: <strong>MSc</strong>, Mathematics and Physics Teacher</li>
+					</ul>
+				</section>
+
+				<section class="section-block">
+					<h2>Certifications</h2>
+					<ul>
+						<li><strong>AWS Certified Solution Architect Associate</strong> — Amazon, Inc (Issued Oct 2023)</li>
+						<li><strong>AWS Certified Solution Architect Associate</strong> — Amazon, Inc (Issued Sep 2020)</li>
+						<li><strong>SAFe 4 Certified Agilist</strong> — Scaled Agile, Inc (Issued May 2017)</li>
+						<li><strong>Oracle Certified Professional</strong> Java SE 7 Programmer 1Z0804 — Oracle (Issued Jan 2015)</li>
+					</ul>
+				</section>
+
+				<section class="section-block">
+					<h2>Awards</h2>
+					<ul>
+						<li>EPAM Impact 2023 — <em>People Developer - Upskilling</em></li>
+						<li>EPAM Impact 2019 — <em>Clients and Technology</em></li>
+						<li>EPAM Impact 2018 — <em>Operating our Business</em></li>
+						<li>EPAM Impact 2017 — <em>Clients and Technology</em></li>
+						<li>EPAM Impact 2016 — <em>Collaboration and Leadership</em></li>
+					</ul>
+				</section>
+			</aside>
+		</section>
+
+		<footer class="footer">
+			<strong>Robert Kovesi</strong>
+			<a href="mailto:kovesirobert@gmail.com">Email</a>
+			<a href="https://linkedin.com/in/robert-kovesi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+		</footer>
+	</main>
 </body>
 </html>
